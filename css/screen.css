@@ -89,7 +89,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 .topnews { float: left; width: 360px; margin-right: 40px; }
 .topnews .topnews__pic { height: 230px; overflow: hidden; margin-bottom: 12px; }
 .topnews .topnews__pic img { display: block; max-width: 100%; }
-.topnews p { margin-top: 13px; font-size: 14px; font-size: 1.4rem; line-height: 1.4; }
+.topnews p { margin-top: 13px; font-size: 15px; font-size: 1.5rem; line-height: 1.4; }
 .topnews .news__time { margin-right: 8px; }
 .topnews .news__title { display: inline; font-size: 26px; font-size: 2.6rem; line-height: 1.15; }
 
@@ -107,9 +107,19 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 .head { margin-bottom: 15px; line-height: 1; }
 .head .head__title { display: inline-block; text-transform: uppercase; font-size: 11px; font-size: 1.1rem; color: #ed1c24; letter-spacing: 0.1em; }
 
-.btn { display: inline-block; height: 24px; border: 1px solid #a6a6a6; line-height: 24px; padding: 0 20px; text-decoration: none; color: black; font-size: 10px; font-size: 1rem; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; letter-spacing: 0.1em; text-transform: uppercase; }
-.btn span { position: relative; }
-.btn.btn_prev { padding: 0 45px; }
-.btn.btn_prev span { background: url('../img/icons-sf334100879.png') 0 -270px no-repeat; width: 15px; height: 9px; }
+.pagi { text-align: right; margin: 25px 0 50px; padding-bottom: 20px; border-bottom: 1px solid gainsboro; }
+
+.btn { display: inline-block; height: 24px; border: 1px solid #a6a6a6; line-height: 24px; padding: 0 20px; text-decoration: none; color: black; font-size: 10px; font-size: 1rem; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; letter-spacing: 0.1em; text-transform: uppercase; position: relative; }
+.btn:hover { color: #ed1c24; }
+.btn.btn_prev { float: left; padding: 0 45px; }
+.btn.btn_prev:before { content: ""; position: absolute; top: 8px; left: 9px; background: url('../img/icons-sf334100879.png') 0 -270px no-repeat; width: 15px; height: 9px; }
 .btn.btn_archive { padding: 0 34px 0 44px; }
-.btn.btn_archive span { background: url('../img/icons-sf334100879.png') 0 -323px no-repeat; width: 17px; height: 14px; }
+.btn.btn_archive:before { content: ""; position: absolute; top: 5px; left: 16px; background: url('../img/icons-sf334100879.png') 0 -323px no-repeat; width: 17px; height: 14px; }
+
+.interview .interview__left { float: left; width: 360px; height: 230px; margin-right: 40px; overflow: hidden; }
+.interview .interview__left img { display: block; max-width: 100%; }
+.interview .interview__right { margin-left: 400px; }
+.interview .interview__right .news li:not(:last-child) { margin-bottom: 20px; }
+.interview .interview__pic { width: 100%; height: 100%; position: relative; }
+.interview .interview__caption { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.3); padding: 10px 20px; color: white; }
+.interview .interview__caption .news__time { margin-right: 8px; }

@@ -1,3 +1,4 @@
+// ------------------------------- begin news -------------------------------
 .news__pic
 	float: left
 	width: 120px
@@ -89,7 +90,9 @@
 		color: #FFF
 		text-transform: uppercase
 		+space
+// -------------------------------  end  news -------------------------------
 
+// ------------------------------- begin toparea -------------------------------
 .topnews
 	float: left
 	width: 360px
@@ -103,7 +106,7 @@
 			max-width: 100%
 	p
 		margin-top: 13px
-		+fs(14)
+		+fs(15)
 		line-height: 1.4
 	.news__time
 		margin-right: 8px
@@ -142,6 +145,7 @@
 		&.is-active
 			background: $border
 			color: #000
+// -------------------------------  end  toparea -------------------------------
 
 .head
 	margin-bottom: 15px
@@ -153,6 +157,11 @@
 		color: $red
 		+space
 
+.pagi
+	text-align: right
+	margin: 25px 0 50px
+	padding-bottom: 20px
+	border-bottom: 1px solid $border
 .btn
 	display: inline-block
 	height: 24px
@@ -165,18 +174,61 @@
 	+proxima
 	+space
 	text-transform: uppercase
-	span
-		position: relative
+	position: relative
+	&:hover
+		color: $red
 	&.btn_prev
+		float: left
 		padding: 0 45px
-		span
+		&:before
+			content: ""
+			position: absolute
+			top: 8px
+			left: 9px
 			+s(prev)
 	&.btn_archive
 		padding: 0 34px 0 44px
-		span
+		&:before
+			content: ""
+			position: absolute
+			top: 5px
+			left: 16px
 			+s(archive)
 
-
+// ------------------------------- begin interview -------------------------------
+.interview
+	.interview__left
+		float: left
+		width: 360px
+		height: 230px
+		margin-right: 40px
+		overflow: hidden
+		img
+			display: block
+			max-width: 100%
+	.interview__right
+		margin-left: 400px
+		.news
+			li:not(:last-child)
+				margin-bottom: 20px
+	.interview__pic
+		width: 100%
+		height: 100%
+		position: relative
+	.interview__caption
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba(0,0,0,0.3)
+		padding: 10px 20px
+		color: #FFF
+		.news__time
+			margin-right: 8px
+		// .news__title
+		// 	&:hover
+		// 		color: $red
+// -------------------------------  end  interview -------------------------------
 
 
 
