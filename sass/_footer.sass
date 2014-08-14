@@ -1,0 +1,89 @@
+.footer
+	margin-top: 70px
+	border-top: 2px solid $red
+	padding-bottom: 30px
+.footer__topics
+	margin-top: 12px
+	padding-bottom: 30px
+	border-bottom: 1px solid $border
+	ul
+		font-size: 0
+	li
+		display: inline-block
+		position: relative
+		margin: 0 10px
+		line-height: 2.4
+		+fs(11)
+		+proxima
+		letter-spacing: 0.08em
+		text-transform: uppercase
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+			&:after
+				display: none
+		&:after
+			content: ""
+			position: absolute
+			top: 11px
+			right: -11px
+			width: 3px
+			height: 3px
+			border-radius: 50%
+			background: $border
+		a
+			text-decoration: none
+			color: #000
+			&:hover
+				color: $red
+.sponsors
+	+clr
+	font-size: 0
+	text-align: center
+	margin-top: 23px
+	white-space: nowrap
+	.sponsors__item
+		display: inline-block
+		width: 110px
+		height: 40px
+		overflow: hidden
+		margin-right: 28px
+		background: $border
+		&:last-child
+			margin-right: 0
+
+.footer__bottom
+	margin-top: 50px
+	+fs(14)
+	line-height: 1.4
+	+clr
+
+.footer__copy
+	margin-top: 30px
+	float: left
+	i
+		font-style: normal
+		color: $red
+	a
+		text-decoration: none
+		color: $red
+
+.footer__stats
+	float: right
+	+clr
+.footer__stats-item
+	float: left
+	margin: 10px 15px 0 0
+	&:last-child
+		margin-right: 0
+	span
+		display: block
+		+proxima
+		color: $red
+.footer__stats-count
+	background: $border
+	width: 90px
+	height: 32px
+	position: relative
+	top: 3px

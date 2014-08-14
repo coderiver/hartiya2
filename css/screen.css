@@ -24,7 +24,9 @@ html { font-size: 62.5%; }
 
 body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color: black; }
 
-.l { max-width: 1080px; min-width: 860px; padding: 0 60px; margin: auto; *zoom: 1; }
+body { max-width: 1080px; padding: 0 60px; margin: auto; }
+
+.l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-top { float: left; width: 810px; margin-bottom: 50px; }
 .l .l-main { float: left; width: 810px; }
@@ -34,7 +36,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 
 .header__right { float: left; width: 220px; }
 
-.logo { display: block; background: url('../img/icons-sf334100879.png') 0 0 no-repeat; width: 201px; height: 55px; font: 0/0 a; text-shadow: none; color: transparent; margin: 19px 0 13px; }
+.logo { display: block; background: url('../img/icons-s2665d50067.png') 0 0 no-repeat; width: 201px; height: 55px; font: 0/0 a; text-shadow: none; color: transparent; margin: 19px 0 13px; }
 
 .header__date { color: #a6a6a6; font-size: 10px; font-size: 1rem; line-height: 1; text-transform: uppercase; letter-spacing: 0.05em; }
 
@@ -49,14 +51,47 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 .header__top .lang a.is-active { color: black; }
 .header__top .send-news { margin-right: 32px; }
 
-.header__search-ico { display: block; float: right; background: url('../img/icons-sf334100879.png') 0 -86px no-repeat; width: 17px; height: 17px; cursor: pointer; margin-top: 8px; }
+.header__search-ico { display: block; float: right; background: url('../img/icons-s2665d50067.png') 0 -182px no-repeat; width: 17px; height: 17px; cursor: pointer; margin-top: 8px; }
 
 .header__topnews { margin: 20px 0 30px; font-size: 0; }
 .header__topnews li { display: inline-block; vertical-align: top; width: 28%; line-height: 1.15; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-right: 3.40909%; font-size: 14px; font-size: 1.4rem; }
 .header__topnews li:last-child { margin-right: 0; }
 .header__topnews a { color: #3c3c3c; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; text-decoration: none; }
-.header__topnews a i { content: ""; display: none; top: 0; right: 0; background: url('../img/icons-sf334100879.png') 0 -362px no-repeat; width: 8px; height: 8px; }
+.header__topnews a i { content: ""; display: none; top: 0; right: 0; background: url('../img/icons-s2665d50067.png') 0 -458px no-repeat; width: 8px; height: 8px; }
 .header__topnews a:hover i { display: inline-block; position: relative; top: -1px; margin-left: 2px; }
+
+.footer { margin-top: 70px; border-top: 2px solid #ed1c24; padding-bottom: 30px; }
+
+.footer__topics { margin-top: 12px; padding-bottom: 30px; border-bottom: 1px solid gainsboro; }
+.footer__topics ul { font-size: 0; }
+.footer__topics li { display: inline-block; position: relative; margin: 0 10px; line-height: 2.4; font-size: 11px; font-size: 1.1rem; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; letter-spacing: 0.08em; text-transform: uppercase; }
+.footer__topics li:first-child { margin-left: 0; }
+.footer__topics li:last-child { margin-right: 0; }
+.footer__topics li:last-child:after { display: none; }
+.footer__topics li:after { content: ""; position: absolute; top: 11px; right: -11px; width: 3px; height: 3px; border-radius: 50%; background: gainsboro; }
+.footer__topics li a { text-decoration: none; color: black; }
+.footer__topics li a:hover { color: #ed1c24; }
+
+.sponsors { *zoom: 1; font-size: 0; text-align: center; margin-top: 23px; white-space: nowrap; }
+.sponsors:after { content: " "; display: table; clear: both; }
+.sponsors .sponsors__item { display: inline-block; width: 110px; height: 40px; overflow: hidden; margin-right: 28px; background: gainsboro; }
+.sponsors .sponsors__item:last-child { margin-right: 0; }
+
+.footer__bottom { margin-top: 50px; font-size: 14px; font-size: 1.4rem; line-height: 1.4; *zoom: 1; }
+.footer__bottom:after { content: " "; display: table; clear: both; }
+
+.footer__copy { margin-top: 30px; float: left; }
+.footer__copy i { font-style: normal; color: #ed1c24; }
+.footer__copy a { text-decoration: none; color: #ed1c24; }
+
+.footer__stats { float: right; *zoom: 1; }
+.footer__stats:after { content: " "; display: table; clear: both; }
+
+.footer__stats-item { float: left; margin: 10px 15px 0 0; }
+.footer__stats-item:last-child { margin-right: 0; }
+.footer__stats-item span { display: block; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; color: #ed1c24; }
+
+.footer__stats-count { background: gainsboro; width: 90px; height: 32px; position: relative; top: 3px; }
 
 .news__pic { float: left; width: 120px; height: 76px; margin: -10px 10px -10px 0; overflow: hidden; }
 .news__pic img { display: block; max-width: 100%; }
@@ -66,10 +101,14 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 .news__title { display: inline; font-size: 16px; font-size: 1.6rem; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; line-height: 1.375; }
 .news__title a { color: black; text-decoration: none; }
 .news__title a:hover { color: #ed1c24; }
+.news__title:hover { color: #ed1c24; }
 
 .news__updated, .news__type { font-size: 12px; font-size: 1.2rem; color: #737373; text-transform: uppercase; font-family: Arial; font-weight: normal; letter-spacing: 0.1em; }
 
 .news__counter { font-size: 12px; font-size: 1.2rem; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; color: #ed1c24; }
+
+.news__views { display: inline-block; position: relative; padding-right: 14px; color: #737373; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; font-size: 12px; font-size: 1.2rem; }
+.news__views:after { content: ""; position: absolute; top: 3px; right: 0; background: url('../img/icons-s2665d50067.png') 0 -253px no-repeat; width: 10px; height: 7px; }
 
 .news { font-size: 15px; font-size: 1.5rem; line-height: 1.4; color: #3c3c3c; *zoom: 1; }
 .news:after { content: " "; display: table; clear: both; }
@@ -79,9 +118,14 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 .news a { text-decoration: none; color: black; }
 .news .news__title { padding-top: 2px; }
 .news .news__title:hover { color: #ed1c24; }
-.news.news_latest { margin-top: 25px; padding-left: 45px; }
+.news.news_latest { margin-top: 10px; padding-left: 45px; }
 .news.news_latest .news__time { position: absolute; top: 4px; left: -45px; }
 .news.news_latest .news__pic { margin: 0 10px 0 0; position: relative; top: 5px; }
+.news.news_week { line-height: 1.2; }
+.news.news_week li { float: none; margin-bottom: 17px; }
+.news.news_week li:last-child { margin-bottom: 0; }
+.news.news_week .news__time { margin-right: 8px; }
+.news.news_week .news__title { margin-right: 8px; }
 
 .news__separator { width: 100%; height: 1px; margin: 50px 0; background-color: gainsboro; position: relative; }
 .news__separator span { position: absolute; z-index: 2; top: -10px; height: 20px; line-height: 20px; padding: 0 16px; background-color: #6a6a6a; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; font-size: 10px; font-size: 1rem; color: white; text-transform: uppercase; letter-spacing: 0.1em; }
@@ -89,7 +133,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 .topnews { float: left; width: 360px; margin-right: 40px; }
 .topnews .topnews__pic { height: 230px; overflow: hidden; margin-bottom: 12px; }
 .topnews .topnews__pic img { display: block; max-width: 100%; }
-.topnews p { margin-top: 13px; font-size: 15px; font-size: 1.5rem; line-height: 1.4; }
+.topnews p { margin-top: 10px; font-size: 15px; font-size: 1.5rem; line-height: 1.35; }
 .topnews .news__time { margin-right: 8px; }
 .topnews .news__title { display: inline; font-size: 26px; font-size: 2.6rem; line-height: 1.15; }
 
@@ -104,17 +148,16 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 .toplist__nav a:hover { color: black; }
 .toplist__nav a.is-active { background: gainsboro; color: black; }
 
-.head { margin-bottom: 15px; line-height: 1; }
-.head .head__title { display: inline-block; text-transform: uppercase; font-size: 11px; font-size: 1.1rem; color: #ed1c24; letter-spacing: 0.1em; }
+.title { display: inline-block; margin-bottom: 15px; font-size: 11px; font-size: 1.1rem; line-height: 1; text-transform: uppercase; color: #ed1c24; letter-spacing: 0.1em; }
 
 .pagi { text-align: right; margin: 25px 0 50px; padding-bottom: 20px; border-bottom: 1px solid gainsboro; }
 
 .btn { display: inline-block; height: 24px; border: 1px solid #a6a6a6; line-height: 24px; padding: 0 20px; text-decoration: none; color: black; font-size: 10px; font-size: 1rem; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; letter-spacing: 0.1em; text-transform: uppercase; position: relative; }
 .btn:hover { color: #ed1c24; }
 .btn.btn_prev { float: left; padding: 0 45px; }
-.btn.btn_prev:before { content: ""; position: absolute; top: 8px; left: 9px; background: url('../img/icons-sf334100879.png') 0 -270px no-repeat; width: 15px; height: 9px; }
+.btn.btn_prev:before { content: ""; position: absolute; top: 8px; left: 9px; background: url('../img/icons-s2665d50067.png') 0 -366px no-repeat; width: 15px; height: 9px; }
 .btn.btn_archive { padding: 0 34px 0 44px; }
-.btn.btn_archive:before { content: ""; position: absolute; top: 5px; left: 16px; background: url('../img/icons-sf334100879.png') 0 -323px no-repeat; width: 17px; height: 14px; }
+.btn.btn_archive:before { content: ""; position: absolute; top: 5px; left: 16px; background: url('../img/icons-s2665d50067.png') 0 -419px no-repeat; width: 17px; height: 14px; }
 
 .interview .interview__left { float: left; width: 360px; height: 230px; margin-right: 40px; overflow: hidden; }
 .interview .interview__left img { display: block; max-width: 100%; }
@@ -123,3 +166,58 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 .interview .interview__pic { width: 100%; height: 100%; position: relative; }
 .interview .interview__caption { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.3); padding: 10px 20px; color: white; }
 .interview .interview__caption .news__time { margin-right: 8px; }
+
+.b { padding-bottom: 15px; border-bottom: 1px solid gainsboro; margin-bottom: 15px; }
+.b:last-child { padding-bottom: 0; border-bottom: none; }
+.b a { text-decoration: none; color: #3c3c3c; }
+.b .title { line-height: 1.3; }
+.b .news__title { line-height: 1.25; }
+
+.photo-video { color: #3c3c3c; position: relative; margin-bottom: 15px; }
+.photo-video .pic { width: 100%; height: 140px; overflow: hidden; margin-bottom: 13px; }
+.photo-video .type { position: absolute; z-index: 2; top: 0; right: 0; }
+.photo-video .type.type_photo { background: url('../img/icons-s2665d50067.png') 0 -385px no-repeat; width: 24px; height: 24px; }
+.photo-video .type.type_video { background: url('../img/icons-s2665d50067.png') 0 -317px no-repeat; width: 24px; height: 24px; }
+.photo-video img { display: block; max-width: 100%; }
+.photo-video .news__title { display: block; }
+.photo-video .news__title:hover { color: #ed1c24; }
+.photo-video .news__time { font-size: 10px; font-size: 1rem; line-height: 2; text-transform: uppercase; letter-spacing: 0.1em; }
+
+.weather { font-size: 13px; font-size: 1.3rem; line-height: 1.9; }
+.weather .weather__head { line-height: 1.3; }
+.weather .weather__head a:hover { color: #ed1c24; }
+.weather .weather__location { display: inline-block; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; font-size: 11px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.weather .weather__location a { color: black; }
+.weather .weather__location a:after { content: ""; display: inline-block; background: url('../img/icons-s2665d50067.png') 0 -165px no-repeat; width: 9px; height: 7px; margin-left: 3px; }
+.weather span { display: inline-block; }
+.weather .weather__day { width: 100px; }
+.weather .weather__ico { float: right; display: inline-block; position: relative; top: 4px; }
+.weather .weather__ico.weather__ico_sunny { background: url('../img/icons-s2665d50067.png') 0 -92px no-repeat; width: 17px; height: 17px; }
+.weather .weather__ico.weather__ico_cloudy { background: url('../img/icons-s2665d50067.png') 0 -65px no-repeat; width: 20px; height: 17px; }
+.weather .weather__ico.weather__ico_rain { background: url('../img/icons-s2665d50067.png') 0 -119px no-repeat; width: 17px; height: 15px; }
+
+.currency { font-size: 13px; font-size: 1.3rem; line-height: 1.9; }
+.currency span { display: inline-block; }
+.currency .currency__name { width: 80px; }
+.currency .currency__buy { width: 50px; text-align: right; }
+.currency .currency__sell { width: 50px; margin-left: 10px; text-align: right; color: #737373; }
+
+.opinion .opinion__item { display: block; color: #3c3c3c; *zoom: 1; margin-bottom: 12px; }
+.opinion .opinion__item:after { content: " "; display: table; clear: both; }
+.opinion .opinion__item:last-child { margin-bottom: 0; }
+.opinion .opinion__pic { float: left; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; }
+.opinion .opinion__pic img { display: block; max-width: 100%; }
+.opinion .opinion__content { margin-left: 70px; }
+.opinion .opinion__author { display: block; font-size: 10px; font-size: 1rem; line-height: 2; color: #a6a6a6; text-transform: uppercase; }
+
+.subscription ul { font-size: 0; }
+.subscription li { display: inline-block; vertical-align: top; width: 50%; font-family: "ProximaNova-Semibold", Arial, sans-serif; font-weight: normal; font-size: 11px; font-size: 1.1rem; letter-spacing: 0.1em; line-height: 2.2; text-transform: uppercase; }
+.subscription a { color: #3c3c3c; }
+.subscription a:hover { color: #ed1c24; }
+.subscription .ico { position: relative; padding-left: 29px; }
+.subscription .ico:before { content: ""; position: absolute; top: 0; left: 0; }
+.subscription .ico.ico_fb:before { background: url('../img/icons-s2665d50067.png') 0 -292px no-repeat; width: 8px; height: 15px; left: 5px; }
+.subscription .ico.ico_yt:before { background: url('../img/icons-s2665d50067.png') 0 -270px no-repeat; width: 16px; height: 12px; }
+.subscription .ico.ico_tw:before { background: url('../img/icons-s2665d50067.png') 0 -231px no-repeat; width: 14px; height: 12px; left: 3px; }
+.subscription .ico.ico_rss:before { background: url('../img/icons-s2665d50067.png') 0 -209px no-repeat; width: 11px; height: 12px; left: 2px; }
+.subscription .ico.ico_vk:before { background: url('../img/icons-s2665d50067.png') 0 -144px no-repeat; width: 19px; height: 11px; }
