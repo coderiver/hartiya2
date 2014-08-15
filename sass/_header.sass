@@ -1,5 +1,5 @@
 .header
-	padding: 30px 0 35px 0
+	margin: 30px 0 35px 0
 	position: relative
 
 .header__right
@@ -54,6 +54,8 @@
 	+s(search)
 	cursor: pointer
 	margin-top: 8px
+	&.is-inactive
+		+s(search-h)
 
 .header__topnews
 	margin: 20px 0 30px
@@ -68,6 +70,10 @@
 		+fs(14)
 		&:last-child
 			margin-right: 0
+		+r($res)
+			width: 35%
+			&:last-child
+				display: none
 	a
 		color: $text
 		+proxima
@@ -85,3 +91,89 @@
 				position: relative
 				top: -1px
 				margin-left: 2px
+
+.search
+	display: none
+	padding: 30px 0
+	background: #E6E6E6
+	.search__in
+		font-size: 0
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+			width: 0
+			font-size: 0
+	.search__input
+		display: inline-block
+		vertical-align: middle
+		width: 800px/1080px*100%
+		max-width: 800px
+		position: relative
+		+r(900)
+			width: 550px
+	input
+		width: 100%
+		height: 40px
+		padding: 0 155px 0 15px
+		border: 1px solid #CCC
+		color: $text
+		+fs(15)
+		font-family: Arial
+		font-weight: normal
+		background: #fff
+		+box
+		+placeholder
+			color: $gray2
+	.search__filter
+		position: absolute
+		top: 0
+		right: 23px
+		bottom: 0
+		+fs(13)
+		color: $text
+		text-decoration: none
+		line-height: 40px
+		&:before
+			content: ""
+			display: inline-block
+			+s(filter-arrow)
+			margin-right: 5px
+			position: relative
+			top: 1px
+	.search__btn
+		display: inline-block
+		vertical-align: middle
+		min-width: 120px
+		height: 40px
+		margin-left: 20px
+		+box
+		background: #FFF
+		border: 1px solid $gray
+		+proxima
+		+fs(15)
+		text-transform: uppercase
+		text-align: center
+		+space
+		&:hover
+			color: $red
+	.search__close
+		float: right
+		display: inline-block
+		+proxima
+		+fs(10)
+		line-height: 40px
+		text-decoration: none
+		text-transform: uppercase
+		color: $gray2
+		+space
+		&:hover
+			color: #000
+		&:before
+			content: ""
+			display: inline-block
+			+s(search-close)
+			position: relative
+			top: 2px
+			margin-right: 6px

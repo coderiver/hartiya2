@@ -8,26 +8,22 @@
 	border-bottom: 1px solid $border
 	ul
 		font-size: 0
+		margin-right: -20px
+		overflow: hidden
 	li
 		display: inline-block
 		position: relative
-		margin: 0 10px
+		margin-right: 20px
 		line-height: 2.4
 		+fs(11)
 		+proxima
 		letter-spacing: 0.08em
 		text-transform: uppercase
-		&:first-child
-			margin-left: 0
-		&:last-child
-			margin-right: 0
-			&:after
-				display: none
-		&:after
+		&:before
 			content: ""
 			position: absolute
 			top: 11px
-			right: -11px
+			left: -11px
 			width: 3px
 			height: 3px
 			border-radius: 50%
@@ -52,6 +48,10 @@
 		background: $border
 		&:last-child
 			margin-right: 0
+		+r($res)
+			margin-right: 10px
+			&:last-child
+				display: none
 
 .footer__bottom
 	margin-top: 50px

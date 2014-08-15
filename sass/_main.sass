@@ -8,8 +8,13 @@
 	img
 		display: block
 		max-width: 100%
++r($res)
+	.news__pic ~ p,
+		margin-left: 130px
+
 .news__time
 	+fs(12)
+	line-height: 1
 	color: $gray
 	font-family: Arial
 	font-weight: normal
@@ -30,6 +35,7 @@
 .news__updated,
 .news__type
 	+fs(12)
+	line-height: 1
 	color: $gray2
 	text-transform: uppercase
 	font-family: Arial
@@ -38,6 +44,7 @@
 
 .news__counter
 	+fs(12)
+	line-height: 1
 	+proxima
 	color: $red
 
@@ -82,6 +89,8 @@
 			position: absolute
 			top: 4px
 			left: -45px
+		.news__title
+			+fs(18)
 		.news__pic
 			margin: 0 10px 0 0
 			position: relative
@@ -97,6 +106,7 @@
 			margin-right: 8px
 		.news__title
 			margin-right: 8px
+			+fs(15)
 
 .news__separator
 	width: 100%
@@ -130,7 +140,7 @@
 		margin-bottom: 12px
 		img
 			display: block
-			max-width: 100%
+			// max-width: 100%
 	p
 		margin-top: 10px
 		+fs(15)
@@ -149,7 +159,10 @@
 .toplist__nav
 	font-size: 0
 	margin-bottom: 20px
+	margin-right: -50px
 	padding-top: 3px
+	+r($res)
+		margin-right: 0
 	li
 		display: inline-block
 		margin-right: 7px
@@ -172,6 +185,7 @@
 		&.is-active
 			background: $border
 			color: #000
+	white-space: nowrap
 // -------------------------------  end  toparea -------------------------------
 
 .title
@@ -231,12 +245,23 @@
 		overflow: hidden
 		img
 			display: block
-			max-width: 100%
+			// max-width: 100%
+		+r($res)
+			width: 300px
+			margin-right: 35px
 	.interview__right
 		margin-left: 400px
+		+r($res)
+			margin-left: 335px
+			.news__title
+				+fs(15)
+			.news
+				line-height: 1.2
 		.news
 			li:not(:last-child)
 				margin-bottom: 20px
+				+r($res)
+					margin-bottom: 15px
 	.interview__pic
 		width: 100%
 		height: 100%
@@ -251,9 +276,9 @@
 		color: #FFF
 		.news__time
 			margin-right: 8px
-		// .news__title
-		// 	&:hover
-		// 		color: $red
+		.news__title
+			&:hover
+				color: #ccc
 // -------------------------------  end  interview -------------------------------
 
 // ------------------------------- begin sidebar blocks -------------------------------

@@ -1,17 +1,29 @@
 // default layout
-body
+.l
 	max-width: 1080px
+	min-width: 830px
 	padding: 0 60px
 	margin: auto
-.l
 	+clr
+	+r($res)
+		padding: 0 20px
 	.l-top
 		float: left
-		width: 810px
+		margin-right: 270px
 		margin-bottom: 50px
+		+clr
+		+r($res)
+			float: none
+			width: 100%
+			margin-right: 0
 	.l-main
 		float: left
-		width: 810px
+		margin-right: 270px
+		+box
 	.l-sidebar
 		float: right
 		width: 220px
+		margin-left: -220px
+
+.main-wrap
+	+clr
