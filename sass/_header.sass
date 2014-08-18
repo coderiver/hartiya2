@@ -96,23 +96,25 @@
 	display: none
 	padding: 30px 0
 	background: #E6E6E6
-	.search__in
-		font-size: 0
-		&:before
-			content: ""
-			display: inline-block
-			vertical-align: middle
-			height: 100%
-			width: 0
-			font-size: 0
-	.search__input
+
+.search__in
+	font-size: 0
+	&:before
+		content: ""
 		display: inline-block
 		vertical-align: middle
-		width: 800px/1080px*100%
-		max-width: 800px
-		position: relative
-		+r(900)
-			width: 550px
+		height: 100%
+		width: 0
+		font-size: 0
+
+.search__input
+	display: inline-block
+	vertical-align: middle
+	width: 800px/1080px*100%
+	max-width: 800px
+	position: relative
+	+r(900)
+		width: 550px
 	input
 		width: 100%
 		height: 40px
@@ -126,54 +128,59 @@
 		+box
 		+placeholder
 			color: $gray2
-	.search__filter
-		position: absolute
-		top: 0
-		right: 23px
-		bottom: 0
-		+fs(13)
-		color: $text
-		text-decoration: none
-		line-height: 40px
-		&:before
-			content: ""
-			display: inline-block
-			+s(filter-arrow)
-			margin-right: 5px
-			position: relative
-			top: 1px
-	.search__btn
+	&.search__input_error
+		width: 440px
+
+.search__filter
+	position: absolute
+	top: 0
+	right: 23px
+	bottom: 0
+	+fs(13)
+	color: $text
+	text-decoration: none
+	line-height: 40px
+	&:before
+		content: ""
 		display: inline-block
-		vertical-align: middle
-		min-width: 120px
-		height: 40px
-		margin-left: 20px
-		+box
-		background: #FFF
-		border: 1px solid $gray
-		+proxima
-		+fs(15)
-		text-transform: uppercase
-		text-align: center
-		+space
-		&:hover
-			color: $red
-	.search__close
-		float: right
+		+s(filter-arrow)
+		margin-right: 5px
+		position: relative
+		top: 1px
+
+.search__btn
+	display: inline-block
+	vertical-align: middle
+	min-width: 120px
+	height: 40px
+	margin-left: 20px
+	+box
+	background: #FFF
+	border: 1px solid $gray
+	+proxima
+	+fs(15)
+	text-transform: uppercase
+	text-align: center
+	+space
+	&:hover
+		color: $red
+
+.search__close
+	float: right
+	display: inline-block
+	+proxima
+	+fs(10)
+	line-height: 40px
+	text-decoration: none
+	text-transform: uppercase
+	color: $gray2
+	+space
+	&:hover
+		color: #000
+	&:before
+		content: ""
 		display: inline-block
-		+proxima
-		+fs(10)
-		line-height: 40px
-		text-decoration: none
-		text-transform: uppercase
-		color: $gray2
-		+space
-		&:hover
-			color: #000
-		&:before
-			content: ""
-			display: inline-block
-			+s(search-close)
-			position: relative
-			top: 2px
-			margin-right: 6px
+		+s(search-close)
+		position: relative
+		top: 2px
+		margin-right: 6px

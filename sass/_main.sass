@@ -192,6 +192,8 @@
 	display: inline-block
 	margin-bottom: 15px
 	+fs(11)
+	+proxima
+	font-weight: normal
 	line-height: 1
 	text-transform: uppercase
 	color: $red
@@ -277,6 +279,7 @@
 		.news__time
 			margin-right: 8px
 		.news__title
+			+fs(18)
 			&:hover
 				color: #ccc
 // -------------------------------  end  interview -------------------------------
@@ -319,10 +322,10 @@
 		display: block
 		max-width: 100%
 	.news__title
-		display: block
 		&:hover
 			color: $red
 	.news__time
+		display: block
 		+fs(10)
 		line-height: 2
 		text-transform: uppercase
@@ -445,217 +448,286 @@
 		&.ico_vk:before
 			+s(vk)
 
+.sidebar-interview
+	li
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
 // -------------------------------  end  sidebar blocks -------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ------------------------------- begin article -------------------------------
+.article
+	margin-top: 25px
+	margin-left: 90px
+	color: $text
+	h1
+		display: inline
+		+proxima
+		+fs(30)
+		line-height: 1.2
+
+	h2
+		+proxima
+		+fs(18)
+		line-height: 1.2
+		text-transform: uppercase
+		+space
+		margin-bottom: 15px
+		&:not(:first-child)
+			margin-top: 30px
+	p
+		+fs(15)
+		line-height: 1.5
+		margin-bottom: 22px
+	a
+		text-decoration: none
+		color: $red
+		&:hover
+			text-decoration: underline
+	blockquote
+		margin: 22px 0
+		+proxima
+		+fs(18)
+		line-height: 1.33
+		padding-left: 38px
+		border-left: 2px solid $red
+	img
+		display: block
+		width: 100%
+
+	.lead
+		+fs(18)
+		line-height: 1.4
+
+	.article__header
+		margin-bottom: 40px
+
+	.news__counter
+		margin-left: 5px
+
+	.article__left
+		float: left
+		margin: 0 40px 30px -90px
+
+	.article__photo
+		width: 360px
+		figcaption
+			margin-top: 15px
+			+proxima
+			+fs(10)
+			line-height: 1.4
+			text-transform: uppercase
+			color: $gray2
+			+space
+
+	.article__aside
+		width: 360px
+		padding: 15px 0 20px
+		border: 1px solid $border
+		border-width: 1px 0 1px
+		li
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		a
+			color: $text
+			text-decoration: none
+			&:hover
+				text-decoration: none
+		dl
+			+fs(13)
+			line-height: 1.54
+			color: $text
+		dt
+			display: inline
+		dd
+			display: inline
+			color: $gray2
+.article__info
+	margin-top: 15px
+	font-size: 0
+	li
+		display: inline-block
+		font-family: Arial
+		+fs(10)
+		text-transform: uppercase
+		color: $gray2
+		letter-spacing: 0.08em
+		padding-right: 10px
+		border-right: 1px solid $border
+		margin-right: 10px
+		&:last-child
+			padding-right: 0
+			margin-right: 0
+			border-right: none
+	i
+		font-style: normal
+		color: $red
+	.news__views
+		font-family: Arial
+		+fs(10)
+
+.social
+	overflow: hidden
+	margin: 30px 0 20px
+	&.social_placehold
+		background: $border
+		color: $gray
+		text-transform: uppercase
+		font-size: 10px
+		+proxima
+		text-align: center
+		line-height: 30px
+
+.article__video
+	background: #F2F2F2
+	padding: 30px 80px
+	margin: 30px 0 20px
+	.article__video-container
+		width: 560px
+		height: 315px
+		overflow: hidden
+	figcaption
+		margin-top: 20px
+		+proxima
+		+fs(10)
+		line-height: 1.4
+		color: $gray2
+		text-transform: uppercase
+		+space
+
+.gallery
+	margin: 30px 0 20px
+	padding: 30px 0 80px
+	background: #F2F2F2
+	position: relative
+	width: 100%
+
+	.gallery__top
+		padding: 0 40px
+		position: relative
+		margin-bottom: 50px
+		font-size: 0
+
+	.gallery__main
+		position: relative
+		padding: 0 80px
+
+	.gallery__pager
+		.slide
+			display: inline-block
+			opacity: 0.5
+			width: 120px !important
+			// height: 76px !important
+			overflow: hidden
+			margin-right: 10px
+			cursor: pointer
+			&:last-child
+				margin-right: 0
+			img
+				display: block
+				width: 100%
+			&.cycle-slide-active
+				opacity: 1
+
+	.gallery__slides
+		overflow: hidden
+		.slide
+			width: 100%
+
+	.gallery__prev,
+	.gallery__next
+		display: block
+		position: absolute
+		z-index: 100
+		top: 60px
+		cursor: pointer
+	.gallery__prev
+		+s(gallery-prev)
+		left: 13px
+	.gallery__next
+		+s(gallery-next)
+		right: 13px
+
+	.gallery__conter
+		+fs(15)
+		font-family: Arial
+		color: $gray2
+		position: absolute
+		bottom: 43px
+		right: 80px
+
+.article__footer
+	margin-top: 50px
+
+	.article__footer-news-list
+		a
+			color: $text
+			text-decoration: none
+		li
+			margin-bottom: 18px
+			&:last-child
+				margin-bottom: 0
+		.news__title
+			margin: 0 5px
+			+fs(15)
+
+	.article__footer-btns
+		margin-top: 45px
+
+	.btn_comment
+		float: left
+		color: #000
+		margin-right: 20px
+		+fs(11)
+		&:hover
+			color: $red
+			text-decoration: none
+		span
+			color: $red
+
+	.article__footer-bottom
+		margin-top: 25px
+		+clr
+		color: $gray2
+		+fs(13)
+		i
+			font-style: normal
+			color: $text
+		a
+			color: $text
+			text-decoration: none
+			&:hover
+				color: $red
+		span:nth-child(2n-1)
+			float: left
+		span:nth-child(2n)
+			float: right
+// -------------------------------  end  article -------------------------------
+
+// ------------------------------- begin error 404 page -------------------------------
+.error
+	text-align: center
+	margin: 115px 0 220px
+	p
+		+fs(15)
+		line-height: 1.3
+		margin: 20px
+		a
+			color: $red
+			text-decoration: none
+
+	.error__title
+		+proxima
+		+fs(48)
+
+	.error__subtitle
+		+proxima
+		+fs(26)
+		color: $gray2
+
+	.error__search
+		margin-top: 20px
+		p
+			margin-bottom: 15px
+// -------------------------------  end  error 404 page -------------------------------
