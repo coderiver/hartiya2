@@ -10,7 +10,7 @@ head.ready(function() {
 		searchHide            = $('.js-search-hide'),
 
 		sidebar               = $('.l-sidebar__inner'),
-		footer                = $('.footer');
+		wrapper               = $('.main-wrap');
 
 	// hide all tabcontents exept first
 	tabContent.not(':first-child').hide();
@@ -49,79 +49,80 @@ head.ready(function() {
 		slideshows.cycle('goto', index);
 	});
 
+	//change position of sidebar to fixed/to static when scrolling document
+	var changeSidebarPosition = function() {
 
+		$(document).scroll(function(event) {
 
-	if ( !sidebar.hasClass('js-no-change') ) {
-		changeSidebarPosition();
+			var sidebarBottomPosition = wrapper.offset().top + sidebar.height(),
+				wrapperTopPosition    = wrapper.offset().top,
+				wrapperBottomPosition = wrapper.offset().top + wrapper.height();
+
+			// check if layout is
+			if ( wrapper.parents('l-article').length == 0 && $(window).width() < 1150 ) {
+				return false;
+			};
+
+			// when sidebar height is less than window height
+			if ( sidebar.height() < $(window).height() ) {
+				var targetTopPosition    = $(document).scrollTop() + 20,
+					targetBottomPosition = $(document).scrollTop() + sidebar.height() +20;
+
+				if ( targetTopPosition >= wrapperTopPosition ) {
+					sidebar.css({
+						position: 'fixed',
+						top: '20px',
+						bottom: 'auto'
+					});
+				}
+				else {
+					sidebar.css({
+						position: 'static',
+						top: 'auto',
+						bottom: 'auto'
+					});
+				};
+
+				if ( targetBottomPosition >= wrapperBottomPosition ) {
+					sidebar.css({
+						position: 'absolute',
+						top: 'auto',
+						bottom: '0'
+					});
+				};
+			}
+			// when sidebar height is larger than window height
+			else {
+				var targetTopPosition    = $(document).scrollTop() + $(window).height();
+
+				if ( targetTopPosition >= sidebarBottomPosition ) {
+					sidebar.css({
+						position: 'fixed',
+						top: 'auto',
+						bottom: '0'
+					});
+				}
+				else {
+					sidebar.css({
+						position: 'static',
+						top: 'auto',
+						bottom: 'auto'
+					});
+				};
+
+				if ( targetTopPosition >= wrapperBottomPosition ) {
+					sidebar.css({
+						position: 'absolute',
+						top: 'auto',
+						bottom: '0'
+					});
+				};
+			};
+		});
 	};
+
+	// if ( !sidebar.hasClass('js-no-change') ) {
+		changeSidebarPosition();
+	// };
 
 });
-
-//change position of sidebar to fixed/to static when scrolling document
-var changeSidebarPosition = function() {
-
-	var	sidebarTopPosition    = sidebar.offset().top,
-		sidebarBottomPosition = sidebar.offset().top + sidebar.height(),
-		footerTopPosition     = footer.offset().top - 70;
-
-	// when sidebar height is less than window height
-	if ( sidebarBottomPosition < $(window).height() ) {
-		$(document).scroll(function(event) {
-			var scrollDocumentTop = $(document).scrollTop();
-
-			if ( scrollDocumentTop >= sidebarTopPosition - 20 ) {
-				sidebar.css({
-					position: 'fixed',
-					top: '20px',
-					bottom: 'auto'
-				});
-			}
-			else {
-				sidebar.css({
-					position: 'static',
-					top: 'auto',
-					bottom: 'auto'
-				});
-			};
-
-			if ( scrollDocumentTop - 40 >= footerTopPosition ) {
-				sidebar.css({
-					position: 'absolute',
-					top: 'auto',
-					bottom: '0'
-				});
-			};
-		});
-	}
-	// when sidebar height is larger than window height
-	else {
-		$(document).scroll(function(event) {
-			var scrollDocumentTop = $(document).scrollTop() + $(window).height();
-
-			if ( scrollDocumentTop >= sidebarBottomPosition ) {
-				sidebar.css({
-					position: 'fixed',
-					top: 'auto',
-					bottom: '0'
-				});
-			}
-			else {
-				sidebar.css({
-					position: 'static',
-					top: 'auto',
-					bottom: 'auto'
-				});
-			};
-
-			if ( scrollDocumentTop >= footerTopPosition ) {
-				sidebar.css({
-					position: 'absolute',
-					top: 'auto',
-					bottom: '0'
-				});
-			};
-		});
-	};
-};
-
-

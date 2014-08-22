@@ -32,8 +32,9 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
 @media only screen and (max-width: 1150px) { .l .l-top { float: none; width: 100%; margin-right: 0; } }
 .l .l-main { float: left; margin-right: 270px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .l .l-sidebar { float: right; width: 220px; margin-left: -220px; }
-@media only screen and (max-width: 1150px) { .l.l_article .l-sidebar { float: left; margin-left: 0; margin-top: 34px; padding-top: 15px; width: 100%; border-top: 1px solid gainsboro; } }
-.l .l-sidebar__inner { width: 220px; -webkit-transition: 0.1s linear; -moz-transition: 0.1s linear; -o-transition: 0.1s linear; transition: 0.1s linear; }
+.l .l-sidebar__inner { width: 220px; }
+@media only screen and (max-width: 1150px) { .l.l_article .l-sidebar { float: left; margin-left: 0; margin-top: 34px; padding-top: 15px; width: 100%; border-top: 1px solid gainsboro; }
+  .l.l_article .l-sidebar__inner { width: 100%; } }
 
 .main-wrap { *zoom: 1; position: relative; }
 .main-wrap:after { content: " "; display: table; clear: both; }

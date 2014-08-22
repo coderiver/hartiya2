@@ -25,6 +25,9 @@
 		width: 220px
 		margin-left: -220px
 
+	.l-sidebar__inner
+		width: 220px
+
 	&.l_article
 		+r($res)
 			.l-sidebar
@@ -34,10 +37,9 @@
 				padding-top: 15px
 				width: 100%
 				border-top: 1px solid $border
+			.l-sidebar__inner
+				width: 100%
 
-	.l-sidebar__inner
-		width: 220px
-		+transition(0.1s linear)
 
 .main-wrap
 	+clr
