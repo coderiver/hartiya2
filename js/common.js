@@ -1,5 +1,11 @@
 head.ready(function() {
+	$('.js-gototop').click(function(event) {
+		event.preventDefault();
+	    $('html, body').animate({
+	        scrollTop: 0
+	    }, 500);
 
+	});
 	var tabs                  = $('.js-tabs'),
 		tab                   = tabs.find('.js-tab').children(),
 		tabContent            = tabs.find('.js-tabcontent').children(),
@@ -53,6 +59,12 @@ head.ready(function() {
 	var changeSidebarPosition = function() {
 
 		$(document).scroll(function(event) {
+			b = $('body');
+			if($(document).scrollTop()>400){
+				b.addClass('can-gototop')
+			} else{
+				b.removeClass('can-gototop')
+			}
 
 			var sidebarBottomPosition = wrapper.offset().top + sidebar.height(),
 				wrapperTopPosition    = wrapper.offset().top,
