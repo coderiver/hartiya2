@@ -410,4 +410,4 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.3; color:
   .header__topnews li { display: block; width: auto; }
   .search__filter { display: none; }
   .btn { display: block; margin-bottom: 5px; float: none !important; text-align: center; }
-  .article .article__left { width: auto !important; margin: 0 0 1em 0 !important; } }
+  .article .article__left { width: auto !important; margin: 0 20px 1em 0 !important; } }
