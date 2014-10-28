@@ -231,7 +231,7 @@
 	display: inline-block
 	height: 24px
 	border: 1px solid $gray
-	line-height: 24px
+	line-height: 26px
 	padding: 0 20px
 	text-decoration: none
 	color: #000
@@ -635,9 +635,10 @@
 	width: 100%
 
 	.gallery__top
+		max-width: 640px
+		margin: 0 auto 50px
 		padding: 0 40px
 		position: relative
-		margin-bottom: 50px
 		font-size: 0
 
 	.gallery__main
@@ -832,3 +833,153 @@
 	b, strong
 		font-weight: bold
 // -------------------------------  end  text block -------------------------------
+
+// ------------------------------- begin comments -------------------------------
+.comments
+	margin-top: 100px
+	padding-top: 25px
+	border-top: 1px solid $border
+	position: relative
+
+.comments__head
+	margin-bottom: 20px
+	margin-top: 40px
+	+fs(18)
+	line-height: 1.2
+	text-transform: uppercase
+	+proxima
+	+space
+	&:first-child
+		margin-top: 0
+	.news__counter
+		margin-left: 5px
+
+.comments__info-text
+	+fs(11)
+	color: $gray
+	line-height: 1.2
+
+.comments__input
+	margin: 30px 0 0 90px
+	padding-left: 120px
+	position: relative
+	width: 410px
+	+clr
+	label
+		position: absolute
+		top: 6px
+		left: 0
+		+fs(15)
+		line-height: 1.2
+	input, textarea
+		display: block
+		width: 100%
+		box-sizing: border-box
+		background: #FFF
+		box-shadow: none
+		border: 1px solid $gray2
+		padding: 5px
+		font: normal 15px/1.2 Arial
+		color: $text
+	textarea
+	.comments__info-text
+		position: absolute
+		top: 100%
+		margin-top: 5px
+	.comments__submit
+		margin-top: 20px
+		float: left
+		& + .comments__info-text
+			position: static
+			margin-top: 20px
+			float: right
+	&.is-marked
+		&:before
+			content: ""
+			position: absolute
+			left: -90px
+			top: 5px
+			+s(comments)
+
+.comments__submit
+	@extend .comment__answer-btn
+	background: none
+	border: none
+	box-shadow: none
+	outline: #FFF
+	+fs(15)
+
+.comment
+	margin-top: 20px
+	// position: relative
+	padding-left: 90px
+	&.is-marked
+		&:before
+			content: ""
+			position: absolute
+			// top: 0
+			left: 0
+			+s(star)
+	&.is-inactive
+		.comment__content
+			color: $gray
+
+.comment__info
+	height: 20px
+	+clr
+	background: #F2F2F2
+	color: $gray
+	line-height: 20px
+	+fs(11)
+	padding: 0 10px
+
+.comment__author
+	+proxima
+	text-transform: uppercase
+	text-decoration: none
+	color: inherit
+	+space
+	a
+		color: inherit
+
+.comment__rating
+	float: right
+	width: 70px
+	height: 20px
+	color: $gray2
+	+justify
+	+fs(12)
+
+.comment__rating-change
+	display: inline-block
+	width: 12px
+	height: 12px
+	background: #FFF
+	border-radius: 50%
+	line-height: 12px
+	text-align: center
+	color: inherit
+	text-decoration: none
+	&:hover
+		box-shadow: 0 0 3px 0 rgba(0,0,0,0.5)
+
+.comment__rating-value
+	display: inline-block
+
+.comment__content
+	display: block
+	margin: 10px 0
+	+fs(15)
+	line-height: 1.4
+
+.comment__answer-btn
+	display: inline-block
+	+proxima
+	text-transform: uppercase
+	text-decoration: none
+	color: $red
+	+space
+	&:hover
+		text-decoration: underline
+
+// -------------------------------  end  comments -------------------------------
